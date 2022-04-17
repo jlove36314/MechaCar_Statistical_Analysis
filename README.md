@@ -22,3 +22,91 @@ Which variables/coefficients provided a non-random amount of variance to the mpg
 Is the slope of the linear model considered to be zero? Why or why not?
 
 Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+
+## Summary Statistics on Suspension Coils
+
+![image](https://user-images.githubusercontent.com/96349827/163726930-f887d70c-f730-43aa-9692-03e02970de91.png)
+
+![image](https://user-images.githubusercontent.com/96349827/163726921-fe4b7abd-78fb-48c2-b970-ad1963f97f8e.png)
+
+The summary variance at Lot1 and Lot2 are lower than 100, so they fit specification. However, the summary variance at Lot3 is 170, and SD is 17. Lot3 have some vehicles are out of specification.
+
+## T-Tests on Suspension Coils
+
+ALL
+
+> results
+
+	One Sample t-test
+
+data:  sc$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+  
+Lot 1
+
+> results1
+
+	One Sample t-test
+
+data:  lot1$PSI
+t = 0, df = 49, p-value = 1
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1499.719 1500.281
+sample estimates:
+mean of x 
+     1500 
+     
+Lot 2
+ 
+> results2
+
+	One Sample t-test
+
+data:  lot2$PSI
+t = 0.51745, df = 49, p-value = 0.6072
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1499.423 1500.977
+sample estimates:
+mean of x 
+   1500.2 
+   
+Lot 3
+
+> results3
+
+	One Sample t-test
+
+data:  lot3$PSI
+t = -2.0916, df = 49, p-value = 0.04168
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1492.431 1499.849
+sample estimates:
+mean of x 
+  1496.14
+  
+## Study Design: MechaCar vs Competition
+
+What metric or metrics are you going to test?
+
+We will test the mean City MPG for MechaCar vs the comptition
+
+What is the null hypothesis or alternative hypothesis?
+
+Null: Mechacar has a better city MPG compared to the competition
+
+What statistical test would you use to test the hypothesis? And why?
+
+We would need to t.test the Mean city MPG for MechaCAr vs the Mean city mpg for the competition
+
+What data is needed to run the statistical test?
+
+To run this study, a sufficient amount of data of each car's city MPG would be need to be collected. According to the Central Limit Theorem, a sample size larger than 30 is sufficient for the theorem to hold.
