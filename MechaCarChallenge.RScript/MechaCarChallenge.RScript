@@ -8,3 +8,16 @@
 > View(total_summary)
 > lot_summary<- sc %>% group_by(Manufacturing_Lot) %>% summarise(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI))
 > View(lot_summary)
+results <- t.test(suspensionCoil_df$PSI, mu = 1500)
+results
+> lot1 <- subset(sc,Manufacturing_Lot == "Lot1") 
+> results1 <- t.test(lot1$PSI, mu = 1500)
+> results1
+> lot2 <- subset(sc,Manufacturing_Lot == "Lot2") 
+> results2 <- t.test(lot2$PSI, mu = 1500)
+> results2
+
+> lot3 <- subset(sc,Manufacturing_Lot == "Lot3")
+> results3 <- t.test(lot3$PSI, mu = 1500)
+> results3
+
